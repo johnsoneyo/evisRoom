@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    
+       <f:metadata>
+            <f:viewParam id="id" name="post_id" value="#{dashboardController.postId}" required="true" />
+            <f:viewAction action="#{dashboardController.onload(dashboardController.postId)}" />
+        </f:metadata>
+        
+    <h:head>
+        
+     
+        <title>Test</title>
+    </h:head>
+    <h:body>
+
+        <p>#{dashboardController.po.postTitle}</p>
+        
+          <h:graphicImage class="img-responsive" value="/image?post_id=#{dashboardController.po.id}" />
+
+    </h:body>
+</html>
